@@ -57,5 +57,9 @@ int main()
     f.set_fahrenheit(fah);
 
     std::cout<<"\n-----------------Displaying the conversion:----------------\n";
-    std::cout<<"Equivalent of celcius to fahrenheit is: "<<c.toFahrenheit();
+    std::cout<<"Equivalent of celcius "<< cel <<" to fahrenheit is: "<< c.toFahrenheit() <<"\n";
+    std::cout<<"Equivalent of fahrenheit "<< fah <<" to celcius is: "<< f.toCelcius() <<"\n";
+
+    return 0;
+    
 }
