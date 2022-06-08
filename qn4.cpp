@@ -48,10 +48,11 @@ private:
 public:
     void read(float A, float B, float C) {a=A; b=B; c=C;}
     void display(){
-        float s=(a+b+c)/2;
-        std::cout<<"\n------------For Rectangle----------------\n";
-        std::cout<<"area: "<<(pow((s*(s-a)*(s-b)*(s-c)),0.5));
-        std::cout<<"\nPerimeter: "<<(a+b+c);
+        float s=(a+b+c)/2; 
+        float AREA= sqrt(s*(s-a)*(s-b)*(s-c));
+        std::cout<<"\n------------For circle----------------\n";
+        std::cout<<"area: "<<AREA;
+        std::cout<<"\nPerimeter: "<<2*s;
     }
 };
 
@@ -65,12 +66,13 @@ int main()
     //for cicle
     std::cout<<"\nFor Circle:\n";
     std::cout<<"radius: ";
+    std::cin>>rad;
     ci.read(rad);
     ci.display();
 
     // for rectangle
     float length {}, breadth {};
-    std::cout<<"\nFor Rectangle: \n";
+    std::cout<<"\n\nFor Rectangle: \n";
     std::cout<<"length: ";
     std::cin >>length;
     std::cout<<"breadth: ";
@@ -80,7 +82,7 @@ int main()
 
     // for triangle
     float a{},b{},c{};
-    std::cout << "\nFor triangle: \n";
+    std::cout << "\n\nFor triangle: \n";
     std::cout << "Enter three sides of triangle: ";
     std::cin>>a;
     std::cin>>b;
