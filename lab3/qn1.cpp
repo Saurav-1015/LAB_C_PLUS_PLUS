@@ -14,7 +14,7 @@ in class Celsius that converts to Fahrenheit scale and returns the value.
 class Celcius
 {
 private:
-    int celcius{};
+    float celcius{};
 public:
     float toFahrenheit()
     {
@@ -30,10 +30,10 @@ public:
 class Fahrenheit
 {
 private:
-    int fahrenheit{};
+    float fahrenheit{};
 public:
     float toCelcius(){
-        return (9*(fahrenheit/5)+32);        
+        return ((fahrenheit-32)*5/9);        
     }
     
     void set_fahrenheit(int fah)
@@ -47,7 +47,7 @@ int main()
 {
     Celcius c;
     Fahrenheit f;
-    int cel{}, fah{};
+    float cel{}, fah{};
     std::cout << "\nEnter the temperature in celcius: ";
     std::cin >> cel;
     c.set_celcius(cel);
