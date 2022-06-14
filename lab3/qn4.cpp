@@ -63,7 +63,7 @@ public:
     {
         float s = (a + b + c) / 2;
         float AREA = sqrt(s * (s - a) * (s - b) * (s - c));
-        std::cout << "\n------------For circle----------------\n";
+        std::cout << "\n------------For Triangle----------------\n";
         std::cout << "area: " << AREA;
         std::cout << "\nPerimeter: " << 2 * s;
     }

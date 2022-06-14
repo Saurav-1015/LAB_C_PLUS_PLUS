@@ -32,17 +32,14 @@ public:
 
     void displayreport()
     {
-        std::cout << "An employee with " << employee_id << " has received Rs " << total_bonus << " and had worked " << total_overtime << " hours as overtime in the year " << year;
+        std::cout << "An employee with employee id " << employee_id << " has received Rs " << total_bonus << " and had worked " << total_overtime << " hours as overtime in the year " << year;
         std::cout << "\n";
     }
 };
 
 int main()
 {
-    int n;
-    std::cout << "\nEnter the no of employee: ";
-    std::cin >> n;
-    EmployeeReport e[n];
+    EmployeeReport e[3];
 
     std::cout << "\nEnter the year: ";
     int y{};
@@ -52,7 +49,7 @@ int main()
     int bonus;
     int overtime;
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 3; i++)
     {
         std::cout << "\nemployee id: ";
         std::cin >> employee;
@@ -66,7 +63,7 @@ int main()
         e[i].setdata(employee, bonus, overtime, y);
     }
 
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < 3; i++)
     {
         e[i].displayreport();
     }
