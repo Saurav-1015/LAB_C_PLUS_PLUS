@@ -21,7 +21,7 @@ public:
 public:
     Time();
     Time(int h, int m, int s);
-    Time add_time_object(int h, int m, int s);
+    void add_time_object( Time t1, Time t2 ,Time &temp);
 };
 
 Time::Time()
@@ -34,10 +34,13 @@ Time::Time(int h, int m, int s)
 {
 }
 
-Time Time::add_time_object(int h, int m, int s)
+void Time::add_time_object( Time t1, Time t2, Time &temp )
 {
-    Time t1{h, m, s};
-    return t1;
+
+    temp.hour= t1.hour + t2.hour;
+    temp.minute = t1.minute + t2.minute;
+    temp.second = t1.second + t2.second;
+
 }
 
 void display_in_12hr_format(Time t)
@@ -91,23 +94,16 @@ void display_in_24hr_format(Time t)
 int main()
 {
 
-    int hour, minute, second;
+    Time t1(14,25,12);
+    Time t2 (6,12,11);
+    std::cout<<"Time taken: \n\nhour: 14\nminute: 25\nsecond: 12\n\nAND\n\nhour: 6\nminute: 12\nsecond: 11\n";
 
-    // asking input for time, hour and second
-    std::cout << "\nEnter the details:";
-    std::cout << "\nhour: ";
-    std::cin >> hour;
-    std::cout << "minute: ";
-    std::cin >> minute;
-    std::cout << "second: ";
-    std::cin >> second;
-
-    // calling function for creating object
-
-    Time t2 = add_time_object(hour, minute, second); // default copy constructor will be called here as well
-
-    display_in_12hr_format(t2);
-    display_in_24hr_format(t2);
+    Time t3;
+    Time t4;
+    t3.add_time_object(t1,t2,t4);
+    std::cout<<"\nAfter sum: ";
+    display_in_12hr_format(t4);
+    display_in_24hr_format(t4);
 
     return 0;
 }
