@@ -8,29 +8,25 @@ made such that it should show the order of constructor and destructor invocation
 */
 
 #include <iostream>
-#include <string>
 
 class Department
 {
 private:
     int department_id;
-    string department_name;
+    char department_name[20];
 public:
-    Department();
-    ~Department();
+    Department(){
+        std::cout << "\nConstructor Invoked";
+    }
+    ~Department(){
+        std::cout << "\nObject n goes out of the scope";
+        std::cout<< "\nDestructor Invoked\n";
+    }
 };
-
-Department::Department()
-: department_id{12},  {
-}
-
-Department::~Department()
-{
-}
-
 
 int main()
 {
+    Department d;
 
     return 0;
 }
