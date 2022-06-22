@@ -13,7 +13,7 @@ There should be functions to display time in 12-hour and 24-hour format.
 
 class Time
 {
-public:
+private:
     int hour;
     int minute;
     int second;
@@ -22,6 +22,9 @@ public:
     Time();
     Time(int h, int m, int s);
     void add_time_object( Time t1, Time t2 ,Time &temp);
+    int get_hour() { return hour;}
+    int get_minute() { return minute;}
+    int get_second() { return second;}
 };
 
 Time::Time()
@@ -45,7 +48,7 @@ void Time::add_time_object( Time t1, Time t2, Time &temp )
 
 void display_in_12hr_format(Time t)
 {
-    int hour = t.hour, minute = t.minute, second = t.second;
+  int hour = t.get_hour(), minute = t.get_minute(), second = t.get_second();
     if (second >= 60)
     {
         minute = minute + second / 60;
@@ -69,7 +72,7 @@ void display_in_12hr_format(Time t)
 
 void display_in_24hr_format(Time t)
 {
-    int hour = t.hour, minute = t.minute, second = t.second;
+    int hour = t.get_hour(), minute = t.get_minute(), second = t.get_second();
     if (second >= 60)
     {
         minute = minute + second / 60;
