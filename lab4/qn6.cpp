@@ -7,3 +7,14 @@ of static data members. Use static member function if it is useful in the progra
 make a separate program that demonstrates the use of static member function.
 
 */
+
+#include <iostream>
+
+class SerialNo
+{
+private:
+
+
+public:
+
+};
