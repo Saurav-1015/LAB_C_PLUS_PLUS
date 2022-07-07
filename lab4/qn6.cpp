@@ -10,6 +10,7 @@ make a separate program that demonstrates the use of static member function.
 
 #include <iostream>
 
+
 class count
 {
 private:
