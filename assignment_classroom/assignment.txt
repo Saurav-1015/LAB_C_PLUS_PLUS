@@ -1,0 +1,6 @@
+Write programs of your choice to overload the following operators. Write programs on paper, take photos of every page, create PDF and submit (turn in).
+a) Index operator (Access elements of array member of the object)
+b) New/delete operator
+c) Assignment operator
+d) Function call operator
+e) Logical operators f) Bitwise operators
