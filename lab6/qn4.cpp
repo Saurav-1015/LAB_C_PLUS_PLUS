@@ -1,87 +1,118 @@
-/*
-qn4.cpp
-
-Write three derived classes inheriting functionality of base class person
-(should have a member function that asks to enter name and age) and with added
-unique features of student, and employee, and functionality to assign, change
-and delete records of student and employee. And make one member function for
-printing the address of the objects of classes (base and derived) using this pointer.
-Create two objects of the base class and derived classes each and print
-the addresses of individual objects. Using a calculator, calculate the address
-space occupied by each object and verify this with address spaces printed by the program.
-*/
-
+#include <stdio.h>
 #include <iostream>
-using namespace std;
+#include <string>
 
-class person
+class Person
 {
-    char name[20];
+
+protected:
+    std::string name;
     int age;
 
 public:
-    void Enter()
+    void askDetails()
     {
-        cout << "\nEnter name: ";
-        cin >> name;
-        cout << "\nage: ";
-        cin >> age;
+        std::cout << "Name : ";
+        std::cin >> this->name;
+
+        std::cout << "Age: ";
+        std::cin >> age;
     }
-    void printAddress()
+
+    void showDetails()
     {
-        cout << "\nThe address of person object  is: " << this << endl;
+        std::cout << "Name : " << this->name;
+
+        std::cout << "Age: " << age;
     }
-};
 
-class student : public person
-{
-
-    int rollno;
-    int grade;
-
-public:
-    void printAddress()
+    void showAddress()
     {
-        cout << "\nThe address of student object is:  " << this << endl;
+        printf("Address is %u\n", this);
     }
 };
 
-class employee : public person
+class Student : public Person
+{
+public:
+    void assignRecord(std::string name, int age)
+    {
+        this->name = name;
+        this->age = age;
+    }
+    void changeRecord(std::string name = "", int age = 0)
+    {
+        if (name != "")
+        {
+            this->name = name;
+        }
+        if (age > 0)
+        {
+            this->age = age;
+        }
+    }
+
+    void deleteRecord()
+    {
+        this->name = "";
+        this->age = 0;
+    }
+
+    void showAddress()
+    {
+        printf("Address is %u\n", this);
+    }
+};
+class Employee : public Person
 {
 
-    int employeeID;
-
 public:
-    void printAddress()
+    void assignRecord(std::string name, int age)
     {
-        cout << "\nThe address of employee object is: " << this << endl;
+        this->name = name;
+        this->age = age;
+    }
+    void changeRecord(std::string name = "", int age = 0)
+    {
+        if (name != "")
+        {
+            this->name = name;
+        }
+        if (age > 0)
+        {
+            this->age = age;
+        }
+    }
+
+    void deleteRecord()
+    {
+        this->name = "";
+        this->age = 0;
+    }
+
+    void showAddress()
+    {
+        printf("Address is %u\n", this);
     }
 };
 
 int main()
 {
-    person p1, p2;
-    student s1, s2;
-    employee e1, e2;
+    Person p1;
+    Person p2;
 
-    p1.printAddress();
-    p2.printAddress();
-    s1.student::printAddress();
-    s2.printAddress();
-    e1.employee::printAddress();
-    e2.printAddress();
+    Student s;
 
-    cout << "want to add more student (y/n)";
-    char y_n;
-    cin >> y_n;
+    Employee e;
 
-    if (y_n == 'y' || y_n == 'n')
-    {
-    int student_record_no;
-        cin >> student_record_no;
-        cout << student_record_no << " no of student object added. You may use it";
-        student s[student_record_no];
-    }
+    p1.showAddress();
+    p2.showAddress();
+    s.showAddress();
+    e.showAddress();
 
+    std::cout << sizeof(p1) << std::endl;
+    std::cout << sizeof(p2) << std::endl;
+    std::cout << sizeof(s) << std::endl;
+    std::cout << sizeof(e) << std::endl;
     return 0;
 }
