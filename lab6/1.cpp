@@ -32,7 +32,7 @@ public:
     meter_centimeter(feet_inch fi);
 };
 
-// class feet_inch
+class feet_inch
 {
     float feet;
     float inches;
