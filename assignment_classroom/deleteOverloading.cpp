@@ -16,7 +16,7 @@ class Student
 public:
     Student(string name = " ", int age = 0)
     {
-        std::cout<<"\nConstructor is called\n";
+        std::cout << "\nConstructor is called\n";
         this->name = name;
         this->age = age;
     }
@@ -29,12 +29,11 @@ public:
         void *temp = malloc(size);
         return temp;
     }
-    void operator delete( void* s)
+    void operator delete(void *s)
     {
         free(s);
-        cout<<"\nMemory free done ";
+        cout << "\nMemory free done ";
     }
-    
 };
 
 int main()
@@ -42,7 +41,8 @@ int main()
 
     Student *std;
     std = new Student("Anonyms", 100);
-    delete(std);
+
     cout << "Name is : " << (*std).get_name() << "\nAge is: " << (*std).get_age() << endl;
+    delete (std);
     return 0;
 }
