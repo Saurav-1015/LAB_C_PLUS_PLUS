@@ -29,6 +29,12 @@ public:
         void *temp = malloc(size);
         return temp;
     }
+    void operator delete( void* s)
+    {
+        free(s);
+        cout<<"\nMemory free done ";
+    }
+    
 };
 
 int main()
@@ -36,6 +42,7 @@ int main()
 
     Student *std;
     std = new Student("Anonyms", 100);
+    delete(std);
     cout << "Name is : " << (*std).get_name() << "\nAge is: " << (*std).get_age() << endl;
     return 0;
 }
