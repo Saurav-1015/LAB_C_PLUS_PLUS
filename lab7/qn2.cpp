@@ -6,10 +6,30 @@ Show the use of the virtual base class.
 */
 
 #include <iostream>
-using namespace std;
 
-int main()
+class Person
 {
+public:
+    void show()
+    {
+        std::cout << "Running show function\n";
+    }
+};
 
-return 0;
+class Employee : public virtual Person
+{
+};
+
+class Student : public virtual Person
+{
+};
+
+class Manager : public Employee, public Student
+{
+};
+
+int main(int argc, char const *argv[])
+{
+    Manager().show();
+    return 0;
 }
