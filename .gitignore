@@ -1,4 +1,6 @@
 *.json
 *.out
 *.zip
+
 test_lab4
+.vscode
