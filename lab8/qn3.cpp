@@ -1,42 +1,45 @@
-/* 
-Write a program that stores the information about students (name, student id, department and address)
-in a structure and then transfers the information to a file in your directory. Finally retrieves the 
-information from your file and print it in the proper format on your output screen.
+/*
+Write a program to overload stream operators to read a complex number and display the complex number in 
+a + ib format.
 */
 
 #include <iostream>
-#include <fstream>
-#include <string>
+// #include <iomanip>
 using namespace std;
 
-const int MAX = 100 ;
-struct Student
+class Complex
 {
-    string name;
-    int st_id;
-    string depart;
-    string addrs;
+
+    private: 
+    int re;
+    int imag;
+
+    public:
+    Complex( int r = 0, int i = 0) { re = r ; imag = i;}
+    friend istream& operator>>( istream& is , Complex& c);
+    friend ostream& operator<<( ostream& os , Complex& c);
+    
 };
+
+istream& operator>>( istream& is , Complex& co)
+{
+    is>>co.re>> co.imag;
+    return is;
+}
+
+ostream& operator<<( ostream& os , Complex& co)
+{
+    os << co.re<< " + i "<< co.imag;
+    return os;
+}
 
 int main()
 {
-    Student s;
-    // opening file and writing inside it
-    ofstream openfile;
-    openfile.open("test.txt");
-    cout<< "Enter the data for a student: FORMAT(name, id, depart, address)" << endl;
-    cin>>s.name >> s.st_id>> s.depart>> s.addrs;
-    openfile<<s.name<<" "<<s.st_id<< " "<< s.depart<< " "<< s.addrs << endl;
-    openfile.close();
-    cout<< "File closed successfully" << endl;
-
-    // extracting from file
-    ifstream getfile;
-    char temp_string[MAX];
-    getfile.open("test.txt");
-    getfile.getline(temp_string, MAX );
-    cout<< "\nThe content of file is displayed below: "<< endl;
-    cout<< temp_string << endl;
+    Complex c;
+    cout << "Enter the real and imaginary part for the complex number:" << endl;
+    cin >> c;
+    cout <<"The complex number is:"<< endl;
+    cout << c;
 
 return 0;
 }
