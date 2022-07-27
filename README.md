@@ -1,4 +1,5 @@
 # LAB_C_PLUS_PLUS
+## other labs will be updated soon
 - lab1
 - lab2
 - lab3 
