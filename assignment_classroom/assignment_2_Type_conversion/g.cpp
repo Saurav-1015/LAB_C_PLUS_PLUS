@@ -39,7 +39,7 @@ FeetInch FeetInch::operator= ( MeterCM  c )
 
     feet = static_cast<int> (temp_total_feet) ;
     inch = (temp_total_feet- feet) * 12  ; 
-    return ( feet, inch );
+    return FeetInch( feet, inch );
 }
 
 int main()

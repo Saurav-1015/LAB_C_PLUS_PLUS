@@ -59,7 +59,7 @@ clock_12 clock_12::operator= ( clock_24  c )
         hour = c.get_hour() - 24; 
     }
 
-    return ( hour, min );
+    return clock_12( hour, min );
 }
 
 int main()

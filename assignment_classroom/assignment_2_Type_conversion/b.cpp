@@ -1,4 +1,4 @@
-// convert from kg to pound 
+// conversion from Cartesian to Polar 
 
 #include <iostream>
 #include <cmath>
@@ -7,7 +7,8 @@
 class Cartesian
 {
     private:
-    float x, y ;   
+    float x, y ;
+
     public:
     Cartesian  ( float a =0 , float b = 0 ) { x = a ; y = b; }
     
@@ -37,7 +38,7 @@ Polar Polar::operator= ( Cartesian c )
 {
     
     r = sqrt( c.get_x() * c.get_x()  + c.get_y() * c.get_y() ) ;
-    theta = atan( (float)(c.get_y())/c.get_x() ) * 180/3.14 ;
+    theta = atan( (float)(c.get_y())/c.get_x() ) * 180/M_PI ;
 
     return Polar(r, theta );
        
@@ -45,9 +46,11 @@ Polar Polar::operator= ( Cartesian c )
 
 int main()
 {
-
+    float x, y;
+    std::cout<< "enter the coordinates in cartesian ( i.e. x and y ) seperated by space\n";
+    std::cin>> x >> y;
     Polar p;
-    Cartesian c(1,1.732) ;
+    Cartesian c(x,y) ;
 
     p = c;
     p.display() ;

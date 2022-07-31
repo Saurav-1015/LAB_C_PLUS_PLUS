@@ -39,7 +39,7 @@ KgGm KgGm::operator= ( PoundOunce  c )
 
     kg = static_cast<int> (temp_total_kg) ;
     gm = (temp_total_kg - kg) * 1000  ; 
-    return ( kg, gm );
+    return KgGm( kg, gm );
 }
 
 int main()
