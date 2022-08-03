@@ -11,38 +11,35 @@ class Queue
 {
     private: 
     T arr[10];
+    int current_index;
 
     public:
     Queue () 
     {
+        current_index =-1;
         for (size_t i = 0; i < 10; i++)
             arr[i] = 0;
     }   
 
     void insert() 
     {
-        std::cout<< "start entering data: "<< std::endl;
-        for ( size_t i = 0 ; i< 10 ; i++ ) 
-            std::cin>> arr[i] ;
-
+        std::cout<< "Add in stack:  "<< std::endl;
+        std::cin>> arr[++current_index] ;
+        std::cout<< arr[current_index];
     }
     
     void remove() 
     {
-        for (size_t i = 0; i < 10 ; i++)
-            arr[i] = 0 ;
-        std::cout<< "\nRemoved queue \n\n";
+        arr[current_index--] = 0 ;
+        if( arr[0] == 0  ) { std::cout<< "Stack is empty"; }
     }
 
     void display() 
     {
         if ( arr[0] != 0 ) 
         {
-            for (size_t i = 0; i < 10 ; i++)
-            {
-                std::cout<< arr[i] << " " ;
-            }
-            std::endl;
+            for (size_t i = 0; i <= current_index ; i++)
+                std::cout<< arr[i] << " ";
         }else
         {
             std::cout<<"The queue is empty\n" << std::endl;
