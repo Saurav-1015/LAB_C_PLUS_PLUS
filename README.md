@@ -8,7 +8,7 @@
 - lab6
 - lab7
 - [lab8](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab8.md)
-- lab9 
+- [lab9](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab9.md) 
 
 This repository contains all the c++ lab done by me in 3rd semester.
 
