@@ -25,7 +25,6 @@ class Queue
     {
         std::cout<< "Add in stack:  "<< std::endl;
         std::cin>> arr[++current_index] ;
-        std::cout<< arr[current_index];
     }
     
     void remove() 
