@@ -1,12 +1,12 @@
 # LAB_C_PLUS_PLUS
 ## other labs will be updated soon
-- lab1
-- lab2
-- lab3 
-- lab4
-- lab5
-- lab6
-- lab7
+- [lab1](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab1.md)
+- [lab2](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab2.md)
+- [lab3](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab3.md)
+- [lab4](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab4.md)
+- [lab5](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab5.md)
+- [lab6](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab6.md)
+- [lab7](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab7.md)
 - [lab8](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab8.md)
 - [lab9](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab9.md) 
 
