@@ -5,7 +5,7 @@ Write a program to find the position of the character 'C' in the sentence
 
 
 #include <stdio.h>
-#include <conio.h>
+// #include <conio.h>
 #include<string.h>
 
 int main(){

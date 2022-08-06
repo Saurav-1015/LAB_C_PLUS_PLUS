@@ -1,6 +1,5 @@
 *.json
 *.out
 *.zip
-
-test_lab4
 .vscode
+lab9/test.cpp
