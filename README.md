@@ -1,5 +1,5 @@
 # LAB_C_PLUS_PLUS
-## other labs will be updated soon
+
 - [lab1](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab1.md)
 - [lab2](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab2.md)
 - [lab3](https://github.com/SauravKumarMahato/LAB_C_PLUS_PLUS/blob/main/All%20lab%20readme.md/lab3.md)
